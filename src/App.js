@@ -1,9 +1,17 @@
+import HeroSection from "./components/HeroSection/HeroSection";
+import Main from "./components/Main/Main";
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <div>
-      <h1 className=" text-3xl font-semibold text-teal-500">
-        Record : The Blog App
-      </h1>
+      <Navbar />
+      <div className=" bg-gray-100 ">
+        <div className="w-[90%] m-auto">
+          <HeroSection />
+          {/* <Main /> */}
+        </div>
+      </div>
     </div>
   );
 }
