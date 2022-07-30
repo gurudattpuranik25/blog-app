@@ -10,6 +10,7 @@ import Login from "./components/Login/Login";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer.js/Footer";
+import BlogDetails from "./components/Blog Details/BlogDetails";
 
 function App() {
   // eslint-disable-next-line
@@ -54,7 +55,7 @@ function App() {
         <div className=" bg-gray-100 ">
           <Route exact path="/">
             <div className="w-[80%] m-auto pb-14 ">
-              <Main />
+              <Main isAuth={isAuth} />
             </div>
           </Route>
           <Route path="/create">
@@ -65,6 +66,11 @@ function App() {
           <Route path="/login">
             <div className="overflow-x-hidden">
               <Login signInWithGoogle={signInWithGoogle} />
+            </div>
+          </Route>
+          <Route path="/blogDetails/:blogId">
+            <div className="overflow-x-hidden">
+              <BlogDetails />
             </div>
           </Route>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { SiBloglovin } from "react-icons/si";
 import { BsSearch } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 import avatar from "../../images/avatar.png";
 
 function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
+  const [searchFilter, setSearchFilter] = useState("");
+
+  const searchHandler = (e) => {
+    setSearchFilter(e.target.value);
+  };
+
   return (
     <div className=" w-screen drop-shadow-md bg-white ">
       <div className=" flex items-center w-[90%] m-auto justify-between py-4">
@@ -22,6 +28,8 @@ function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
           <input
             type="text"
             className=" relative px-8 py-3 w-[35rem] rounded-lg bg-gray-100"
+            value={searchFilter}
+            onChange={searchHandler}
             placeholder="Discover news, articles and more"
           />
         </div>

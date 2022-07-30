@@ -97,7 +97,7 @@ function CreateBlog() {
           </select>
           <input
             type="text"
-            placeholder="Cover image URL"
+            placeholder="Cover image URL (jpg/png)"
             value={formData.image}
             name="image"
             onChange={handleChange}
