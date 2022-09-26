@@ -1,0 +1,6 @@
+@media (max-width: 1000px) {
+  .create__form {
+    width: 90%;
+    transition: all 0.2s ease-in-out;
+  }
+}

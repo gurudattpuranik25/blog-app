@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import { useHistory } from "react-router-dom";
+import "./CreateBlog.css";
 
 function CreateBlog() {
   const history = useHistory();
@@ -49,7 +50,7 @@ function CreateBlog() {
   return (
     <div className=" h-screen">
       <form action="" onSubmit={addBlog}>
-        <div className=" w-[50%] flex flex-col gap-2 m-auto text-center">
+        <div className=" create__form w-[50%] flex flex-col gap-2 m-auto text-center">
           <h1 className=" text-3xl font-semibold py-6">Create New Post</h1>
           <input
             type="text"
