@@ -14,7 +14,8 @@
 }
 
 @media (max-width: 950px) {
-  .blog__grid {
+  .blog__grid,
+  .empty__blog {
     margin-top: 25rem;
   }
 }
@@ -27,20 +28,27 @@
   .blog__grid .blog__card .blog__image {
     height: 15rem;
   }
+  .empty__tag {
+    font-size: 1.2rem;
+  }
+  .empty__blog img {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 
-@media (max-width: 685px) {
-  .blog__grid {
+@media (max-width: 500px) {
+  .empty__blog {
     display: flex;
     flex-direction: column;
   }
-  .blog__grid .blog__card .blog__image {
-    height: 15rem;
+  .empty__tag {
+    text-align: center;
   }
 }
 
 @media (max-width: 450px) {
   .blog__grid .blog__card .blog__image {
-    height: 12 rem;
+    height: 12rem;
   }
 }

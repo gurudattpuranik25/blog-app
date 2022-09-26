@@ -1,8 +1,9 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <div className=" flex items-center justify-center gap-8 py-6 shadow-xl">
+    <div className=" footer__section flex items-center justify-center gap-8 py-6 shadow-xl">
       <span>copyright &copy; 2022 - Gurudatt Puranik</span>
       <div className=" flex gap-4">
         <i
