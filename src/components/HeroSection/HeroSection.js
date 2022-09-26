@@ -3,7 +3,7 @@ import heroData from "./data";
 import SliderBlogs from "./SliderBlogs";
 import "./Filter.css";
 
-function HeroSection({ filterBlogs }) {
+function HeroSection({ filterBlogs, signInWithGoogle, isAuth, signUserOut }) {
   return (
     <div>
       <div className=" filter__grid flex flex-wrap gap-4 justify-center py-14">
@@ -18,7 +18,11 @@ function HeroSection({ filterBlogs }) {
           </div>
         ))}
       </div>
-      <SliderBlogs />
+      <SliderBlogs
+        isAuth={isAuth}
+        signInWithGoogle={signInWithGoogle}
+        signUserOut={signUserOut}
+      />
     </div>
   );
 }

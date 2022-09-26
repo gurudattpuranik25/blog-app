@@ -55,7 +55,11 @@ function App() {
         <div className=" bg-gray-100 ">
           <Route exact path="/">
             <div className="w-[80%] m-auto pb-14 ">
-              <Main isAuth={isAuth} />
+              <Main
+                isAuth={isAuth}
+                signInWithGoogle={signInWithGoogle}
+                signUserOut={signUserOut}
+              />
             </div>
           </Route>
           <Route path="/create">
