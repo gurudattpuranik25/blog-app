@@ -6,6 +6,7 @@ import { RiLogoutCircleRLine } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import avatar from "../../images/avatar.png";
+import "./Navbar.css";
 
 function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
   const [searchFilter, setSearchFilter] = useState("");
@@ -15,15 +16,15 @@ function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
   };
 
   return (
-    <div className=" w-screen drop-shadow-md bg-white ">
-      <div className=" flex items-center w-[90%] m-auto justify-between py-4">
+    <div className=" nav__container w-screen drop-shadow-md bg-white ">
+      <div className=" navbar flex items-center w-[90%] m-auto justify-between py-4">
         <Link to="/">
-          <div className=" flex items-center gap-2 cursor-pointer">
+          <div className=" logo flex items-center gap-2 cursor-pointer">
             <SiBloglovin className="text-rose-500 text-3xl font-bold" />
             <h1 className=" text-xl font-semibold">Record : In & Out</h1>
           </div>
         </Link>
-        <div className=" flex items-center ">
+        <div className="search flex items-center ">
           <BsSearch className=" text-rose-500 font-semibold absolute ml-2 text-md z-10" />
           <input
             type="text"
@@ -33,7 +34,7 @@ function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
             placeholder="Discover news, articles and more"
           />
         </div>
-        <div className=" flex items-center gap-6 text-md">
+        <div className="auth__links flex items-center gap-6 text-md">
           <Link
             to={`/${isAuth ? "create" : "login"}`}
             className=" flex items-center gap-2 border-2 px-4 py-1 rounded-lg "
@@ -65,6 +66,9 @@ function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
               </Link>
             </div>
           )}
+        </div>
+        <div className="menu__btn text-2xl">
+          <i className="fa fa-bars" />
         </div>
       </div>
     </div>

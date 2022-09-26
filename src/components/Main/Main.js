@@ -6,6 +6,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import { Link } from "react-router-dom";
 import { BsFillTrashFill } from "react-icons/bs";
 import EmptyBlogList from "./EmptyBlogList";
+import "./Main.css";
 
 function Main({ isAuth }) {
   var [blogs, setBlogs] = useState([]);
@@ -78,16 +79,16 @@ function Main({ isAuth }) {
     <div>
       <HeroSection filterBlogs={filterBlogs} />
       {filteredState ? (
-        <div className=" mt-12 grid grid-cols-4 gap-y-4 gap-3">
+        <div className=" blog__grid mt-12 grid grid-cols-4 gap-y-4 gap-3">
           {blogs.map((item) => (
             <div
               key={item.id}
-              className=" flex flex-col bg-white rounded-xl h-[28rem] relative drop-shadow-lg "
+              className=" blog__card flex flex-col bg-white rounded-xl h-[28rem] relative drop-shadow-lg "
             >
               <div className=" overflow-hidden rounded-t-xl">
                 <img
                   src={item.image}
-                  className=" w-full h-[12rem] rounded-t-xl cursor-pointer hover:scale-125 transition-all duration-500 "
+                  className=" blog__image w-full h-[12rem] rounded-t-xl cursor-pointer hover:scale-125 transition-all duration-500 "
                   alt=""
                 />
               </div>

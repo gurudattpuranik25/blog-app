@@ -1,0 +1,18 @@
+.menu__btn {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 630px) {
+  .menu__btn {
+    display: block;
+  }
+  .auth__links {
+    display: none;
+  }
+}

@@ -33,7 +33,7 @@ function SliderBlogs() {
         {sliderBlogs.map((item) => (
           <SwiperSlide
             key={item.id}
-            className=" flex items-center justify-start gap-8 rounded-lg w-full"
+            className=" hero__blogs flex items-center justify-start gap-8 rounded-lg w-full"
           >
             <div className=" flex flex-col gap-3 text-left">
               <span className=" tracking-wider text-rose-500 font-semibold animate-bounce ">

@@ -1,0 +1,12 @@
+@media (max-width: 500px) {
+  .filter__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .filter__btn {
+    width: 10rem;
+  }
+  .filter__btn p {
+    font-size: 1rem;
+  }
+}
