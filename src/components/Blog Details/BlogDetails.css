@@ -1,4 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600;700&display=swap");
-.blog-heading {
+.blog__heading {
   font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+@media (max-width: 1250px) {
+  .blog__details {
+    width: 90%;
+  }
+  .blog__details img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .blog__heading {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .blog__details img {
+    height: 20rem;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 530px) {
+  .blog__details img {
+    height: 15rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .blog__details p {
+    font-size: 1rem;
+  }
+
+  .blog__heading {
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 425px) {
+  .blog__details img {
+    height: 13rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .blog__heading {
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }
 }

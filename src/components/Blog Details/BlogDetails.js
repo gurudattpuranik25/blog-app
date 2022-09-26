@@ -27,8 +27,8 @@ function BlogDetails() {
 
   return (
     <div>
-      <div className=" w-[80%] m-auto my-12 ">
-        <h1 className=" blog-heading text-center text-3xl font-semibold ">
+      <div className=" blog__details w-[80%] m-auto my-12 ">
+        <h1 className=" blog__heading text-center text-3xl font-semibold ">
           {myData.title}
         </h1>
         <img
