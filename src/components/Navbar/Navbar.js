@@ -9,9 +9,9 @@ import avatar from "../../images/avatar.png";
 import "./Navbar.css";
 import "../Main/Main.css";
 
-function MenuCard({ signInWithGoogle, isAuth, signUserOut }) {
+function MenuCard({ signInWithGoogle, isAuth, signUserOut, setIsMenu }) {
   return (
-    <div className="nav__links menu__visibility flex items-center  text-md">
+    <div className="nav__links menu__visibility flex items-center text-md">
       <Link
         to={`/${isAuth ? "create" : "login"}`}
         className=" flex items-center gap-2 border-2 px-4 py-1 rounded-lg "
@@ -48,7 +48,7 @@ function MenuCard({ signInWithGoogle, isAuth, signUserOut }) {
 }
 
 function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
-  const [isMenu, setIsMenu] = useState(true);
+  const [isMenu, setIsMenu] = useState(false);
 
   const [searchFilter, setSearchFilter] = useState("");
 
@@ -118,7 +118,16 @@ function Navbar({ signInWithGoogle, isAuth, signUserOut }) {
           </div>
         </div>
       </div>
-      {isMenu ? <MenuCard /> : ""}
+      {isMenu ? (
+        <MenuCard
+          isAuth={isAuth}
+          signInWithGoogle={signInWithGoogle}
+          signUserOut={signUserOut}
+          setIsMenu={setIsMenu}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
