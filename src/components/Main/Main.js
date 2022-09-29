@@ -6,50 +6,12 @@ import HeroSection from "../HeroSection/HeroSection";
 import { Link } from "react-router-dom";
 import { BsFillTrashFill } from "react-icons/bs";
 import EmptyBlogList from "./EmptyBlogList";
-import { FcGoogle } from "react-icons/fc";
-import { RiLogoutCircleRLine } from "react-icons/ri";
-import { AiOutlinePlus } from "react-icons/ai";
-import avatar from "../../images/avatar.png";
+// import { FcGoogle } from "react-icons/fc";
+// import { RiLogoutCircleRLine } from "react-icons/ri";
+// import { AiOutlinePlus } from "react-icons/ai";
+// import avatar from "../../images/avatar.png";
 import "./Main.css";
 import "../Navbar/Navbar.css";
-
-function MenuCard({ signInWithGoogle, isAuth, signUserOut }) {
-  return (
-    <div className="nav__links menu__visibility flex items-center  text-md">
-      <Link
-        to={`/${isAuth ? "create" : "login"}`}
-        className=" flex items-center gap-2 border-2 px-4 py-1 rounded-lg "
-      >
-        <AiOutlinePlus />
-        Create New Post
-      </Link>
-      {isAuth ? (
-        <div className="flex items-center gap-2">
-          {/* <h1>Hi, {auth.currentUser.email}</h1> */}
-          <button
-            className="flex gap-2 items-center border-2 px-4 py-1 rounded-lg "
-            onClick={signUserOut}
-          >
-            {" "}
-            <RiLogoutCircleRLine /> Logout
-          </button>
-          <img src={avatar} className=" w-12 h-12 rounded-full" alt="" />
-        </div>
-      ) : (
-        <div>
-          <Link
-            to=""
-            className="flex gap-2 items-center border-2 px-4 py-1 rounded-lg "
-            onClick={signInWithGoogle}
-          >
-            {" "}
-            <FcGoogle /> Sign in with Google
-          </Link>
-        </div>
-      )}
-    </div>
-  );
-}
 
 function Main({ isAuth }) {
   var [blogs, setBlogs] = useState([]);
@@ -98,7 +60,6 @@ function Main({ isAuth }) {
 
   return (
     <div>
-      <MenuCard />
       <HeroSection isAuth={isAuth} filterBlogs={filterBlogs} />
       {filteredState ? (
         <div className=" blog__grid mt-12 grid grid-cols-4 gap-y-4 gap-3">

@@ -1,3 +1,8 @@
+.fixed__navbar {
+  position: fixed;
+  z-index: 100;
+}
+
 .menu__btn {
   display: none;
 }

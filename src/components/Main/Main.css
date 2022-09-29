@@ -40,11 +40,11 @@
 }
 
 @media (max-width: 670px) {
-  /* .menu__visibility {
+  .menu__visibility {
     display: block;
     display: flex;
     width: 100%;
-  } */
+  }
 }
 
 @media (max-width: 685px) {

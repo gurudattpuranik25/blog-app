@@ -48,7 +48,7 @@ function CreateBlog() {
   };
 
   return (
-    <div className=" h-screen">
+    <div className=" h-screen pt-20">
       <form action="" onSubmit={addBlog}>
         <div className=" create__form w-[50%] flex flex-col gap-2 m-auto text-center">
           <h1 className=" text-3xl font-semibold py-6">Create New Post</h1>

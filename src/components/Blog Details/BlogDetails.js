@@ -26,7 +26,7 @@ function BlogDetails() {
   readMore();
 
   return (
-    <div>
+    <div className=" pt-14">
       <div className=" blog__details w-[80%] m-auto my-12 ">
         <h1 className=" blog__heading text-center text-3xl font-semibold ">
           {myData.title}

@@ -5,7 +5,7 @@ import "./Filter.css";
 
 function HeroSection({ filterBlogs, signInWithGoogle, isAuth, signUserOut }) {
   return (
-    <div>
+    <div className=" pt-14">
       <div className=" filter__grid flex flex-wrap gap-4 justify-center py-14">
         {heroData.map((item) => (
           <div
