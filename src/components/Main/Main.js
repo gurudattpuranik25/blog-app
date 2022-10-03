@@ -17,6 +17,7 @@ function Main({ isAuth }) {
   var [blogs, setBlogs] = useState([]);
   const [filteredState, setFilteredState] = useState(true);
   const blogCollectionRef = collection(db, "BolgData");
+  //BlogData is misspelt as BolgData
 
   useEffect(() => {
     const getBlogs = async () => {
